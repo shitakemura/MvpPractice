@@ -30,5 +30,7 @@ extension UserItemViewDataSource: UITableViewDataSource {
 }
 
 extension UserItemViewDataSource: UITableViewDelegate {
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+    }
 }

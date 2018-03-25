@@ -2,8 +2,9 @@
 import Foundation
 
 protocol UserItemPresenter: class {
-    func fetchUserItems()
+    var title: String { get }
     var numberOfItems: Int { get }
+    func fetchUserItems()
     func userItem(at index: Int) -> UserItem
 }
 
@@ -18,6 +19,10 @@ final class UserItemViewPresenter: UserItemPresenter {
     init(view: UserItemView) {
         self.view = view
         fetchUserItems()
+    }
+    
+    var title: String {
+        return "UserItem"
     }
     
     var numberOfItems: Int {

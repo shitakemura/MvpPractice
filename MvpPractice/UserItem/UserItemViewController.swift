@@ -9,20 +9,25 @@ final class UserItemViewController: UIViewController, UserItemView {
 
     @IBOutlet weak var tableView: UITableView!
     
-    private lazy var userItemPresenter: UserItemViewPresenter = UserItemViewPresenter(view: self)
-    private lazy var dataSource = UserItemViewDataSource(presenter: userItemPresenter)
+    private lazy var presenter: UserItemViewPresenter = UserItemViewPresenter(view: self)
+    private lazy var dataSource = UserItemViewDataSource(presenter: self.presenter)
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        title = "User Item"
-        dataSource.setup(with: tableView)
+        setupUI()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+}
 
+extension UserItemViewController {
+    func setupUI() {
+        title = presenter.title
+        dataSource.setup(with: tableView)
+    }
+    
     func reloadData() {
         tableView.reloadData()
     }
