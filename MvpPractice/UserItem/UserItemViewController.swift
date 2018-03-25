@@ -3,32 +3,31 @@ import UIKit
 
 protocol UserItemView: class {
     func reloadData()
+    func show(userItem: UserItem)
 }
 
 final class UserItemViewController: UIViewController, UserItemView {
 
     @IBOutlet weak var tableView: UITableView!
     
-    private lazy var presenter: UserItemViewPresenter = UserItemViewPresenter(view: self)
-    private lazy var dataSource = UserItemViewDataSource(presenter: self.presenter)
+    private var presenter: UserItemViewPresenter!
+    private var dataSource: UserItemViewDataSource!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupUI()
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
+        presenter = UserItemViewPresenter(view: self)
+        dataSource = UserItemViewDataSource(presenter: presenter)
+        title = presenter.title
+        dataSource.setup(with: tableView)
     }
 }
 
 extension UserItemViewController {
-    func setupUI() {
-        title = presenter.title
-        dataSource.setup(with: tableView)
-    }
-    
     func reloadData() {
         tableView.reloadData()
+    }
+    func show(userItem: UserItem) {
+        let itemDetailViewController = ItemDetailViewController(userItem: userItem)
+        navigationController?.pushViewController(itemDetailViewController, animated: true)
     }
 }

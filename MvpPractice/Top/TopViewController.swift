@@ -1,10 +1,3 @@
-//
-//  TopViewController.swift
-//  MvpPractice
-//
-//  Created by Shintaro Takemura on 2018/03/24.
-//  Copyright © 2018年 Shintaro Takemura. All rights reserved.
-//
 
 import UIKit
 
@@ -15,32 +8,18 @@ protocol TopView: class {
 final class TopViewController: UIViewController, TopView {
 
     @IBOutlet weak var startButton: UIButton!
-    
-    private let presenter: TopPresenter
-    
-    init() {
-        presenter = TopViewPresenter()
-        super.init(nibName: TopViewController.className, bundle: nil)
-        presenter.view = self
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
+    private var presenter: TopPresenter!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupUI()
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
+        presenter = TopViewPresenter(view: self)
+        title = presenter.title
+        setupStartButton()
     }
 }
 
 extension TopViewController {
-    func setupUI() {
-        title = presenter.title
+    func setupStartButton() {
         startButton.addTarget(self, action: #selector(didTapStartButton), for: .touchUpInside)
     }
     

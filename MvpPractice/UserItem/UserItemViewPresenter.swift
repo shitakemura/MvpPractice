@@ -6,13 +6,14 @@ protocol UserItemPresenter: class {
     var numberOfItems: Int { get }
     func fetchUserItems()
     func userItem(at index: Int) -> UserItem
+    func showUserItem(at index: Int)
 }
 
 final class UserItemViewPresenter: UserItemPresenter {
-    private var view: UserItemView
+    private weak var view: UserItemView?
     private var userItems: [UserItem] = [] {
         didSet {
-            view.reloadData()
+            view?.reloadData()
         }
     }
     
@@ -35,5 +36,10 @@ final class UserItemViewPresenter: UserItemPresenter {
     
     func userItem(at index: Int) -> UserItem {
         return userItems[index]
+    }
+    
+    func showUserItem(at index: Int) {
+        let userItem = userItems[index]
+        view?.show(userItem: userItem)
     }
 }
