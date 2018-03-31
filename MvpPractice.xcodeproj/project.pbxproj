@@ -11,6 +11,7 @@
 		181C8EDF2067396B00184231 /* ItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181C8EDD2067396B00184231 /* ItemDetailViewController.swift */; };
 		181C8EE02067396B00184231 /* ItemDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 181C8EDE2067396B00184231 /* ItemDetailViewController.xib */; };
 		181C8EE2206739A900184231 /* ItemDetailViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181C8EE1206739A900184231 /* ItemDetailViewPresenter.swift */; };
+		1830E081206FAB4E00E7C4AC /* EnumType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1830E080206FAB4E00E7C4AC /* EnumType.swift */; };
 		18925F192066889300068FF0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18925F182066889300068FF0 /* AppDelegate.swift */; };
 		18925F202066889300068FF0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18925F1F2066889300068FF0 /* Assets.xcassets */; };
 		18925F232066889300068FF0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18925F212066889300068FF0 /* LaunchScreen.storyboard */; };
@@ -31,6 +32,7 @@
 		181C8EDD2067396B00184231 /* ItemDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailViewController.swift; sourceTree = "<group>"; };
 		181C8EDE2067396B00184231 /* ItemDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemDetailViewController.xib; sourceTree = "<group>"; };
 		181C8EE1206739A900184231 /* ItemDetailViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailViewPresenter.swift; sourceTree = "<group>"; };
+		1830E080206FAB4E00E7C4AC /* EnumType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumType.swift; sourceTree = "<group>"; };
 		18925F152066889300068FF0 /* MvpPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MvpPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18925F182066889300068FF0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18925F1F2066889300068FF0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				18925F392066913E00068FF0 /* UserItem.swift */,
+				1830E080206FAB4E00E7C4AC /* EnumType.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -223,6 +226,7 @@
 				18925F4520669CD400068FF0 /* NSObjectProtocol+Extension.swift in Sources */,
 				18925F332066893000068FF0 /* UserItemViewController.swift in Sources */,
 				18925F3A2066913E00068FF0 /* UserItem.swift in Sources */,
+				1830E081206FAB4E00E7C4AC /* EnumType.swift in Sources */,
 				18925F38206690EE00068FF0 /* UserItemViewPresenter.swift in Sources */,
 				18925F4120669BFD00068FF0 /* UserItemTableViewCell.swift in Sources */,
 				18925F3E20669AC800068FF0 /* UserItemViewDataSource.swift in Sources */,
