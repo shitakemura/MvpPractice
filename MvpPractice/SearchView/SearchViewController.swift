@@ -1,24 +1,24 @@
 
 import UIKit
 
-protocol TopView: class {
+protocol SearchView: class {
     func showUserItem()
 }
 
-final class TopViewController: UIViewController, TopView {
+final class SearchViewController: UIViewController, SearchView {
 
     @IBOutlet weak var startButton: UIButton!
-    private var presenter: TopPresenter!
+    private var presenter: SearchPresenter!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        presenter = TopViewPresenter(view: self)
+        presenter = SearchViewPresenter(view: self)
         title = presenter.title
         setupStartButton()
     }
 }
 
-extension TopViewController {
+extension SearchViewController {
     func setupStartButton() {
         startButton.addTarget(self, action: #selector(didTapStartButton), for: .touchUpInside)
     }
@@ -28,7 +28,7 @@ extension TopViewController {
     }
     
     func showUserItem() {
-        let userItemViewController = UserItemViewController()
+        let userItemViewController = SearchResultViewController()
         navigationController?.pushViewController(userItemViewController, animated: true)
     }
 }

@@ -1,13 +1,13 @@
 
 import Foundation
 
-protocol ItemDetailPresenter: class {
-    weak var view: ItemDetailView? { get set }
+protocol ResultDetailPresenter: class {
+    weak var view: ResultDetailView? { get set }
     var title: String { get }
 }
 
-final class ItemDetailViewPresenter: ItemDetailPresenter {
-    weak var view: ItemDetailView?
+final class ItemDetailViewPresenter: ResultDetailPresenter {
+    weak var view: ResultDetailView?
     private let userItem: UserItem
     var title: String {
         return userItem.name

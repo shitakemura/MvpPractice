@@ -1,17 +1,17 @@
 
 import UIKit
 
-protocol ItemDetailView: class {
+protocol ResultDetailView: class {
     
 }
 
-final class ItemDetailViewController: UIViewController, ItemDetailView {
+final class ResultDetailViewController: UIViewController, ResultDetailView {
 
-    private var presenter: ItemDetailPresenter!
+    private var presenter: ResultDetailPresenter!
     
     init(userItem: UserItem) {
         presenter = ItemDetailViewPresenter(userItem: userItem)
-        super.init(nibName: ItemDetailViewController.className, bundle: nil)
+        super.init(nibName: ResultDetailViewController.className, bundle: nil)
         presenter.view = self
     }
     

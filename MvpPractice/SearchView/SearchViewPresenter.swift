@@ -1,17 +1,17 @@
 
 import Foundation
 
-protocol TopPresenter: class {
+protocol SearchPresenter: class {
     var title: String { get }
     func showUserItem()
 }
 
-final class TopViewPresenter: TopPresenter {
-    private weak var view: TopView?
+final class SearchViewPresenter: SearchPresenter {
+    private weak var view: SearchView?
     var title: String {
         return "Top"
     }
-    init(view: TopView) {
+    init(view: SearchView) {
         self.view = view
     }
     func showUserItem() {

@@ -1,7 +1,7 @@
 
 import Foundation
 
-protocol UserItemPresenter: class {
+protocol SearchResultPresenter: class {
     var title: String { get }
     var numberOfItems: Int { get }
     func fetchUserItems()
@@ -9,15 +9,15 @@ protocol UserItemPresenter: class {
     func showUserItem(at index: Int)
 }
 
-final class UserItemViewPresenter: UserItemPresenter {
-    private weak var view: UserItemView?
+final class SearchResultViewPresenter: SearchResultPresenter {
+    private weak var view: SearchResultView?
     private var userItems: [UserItem] = [] {
         didSet {
             view?.reloadData()
         }
     }
     
-    init(view: UserItemView) {
+    init(view: SearchResultView) {
         self.view = view
         fetchUserItems()
     }
