@@ -1,8 +1,21 @@
 import Foundation
 
-enum DatePickerItems: Int {
-    case area = 0
-    case school = 1
+struct InputPickerModel {
+    let data: PickerData
+    var selectedItemIndex: Int?
+    
+    init(data: PickerData) {
+        self.data = data
+    }
+}
+
+enum PickerData {
+    case area
+    case school
+    
+    var selfName: String {
+        return "\(self)"
+    }
     
     var title: String {
         switch self {
@@ -13,23 +26,31 @@ enum DatePickerItems: Int {
         }
     }
     
-    var all: [Inputable] {
+    var items: [ItemType] {
         switch self {
-        case .area:      return Area.all
-        case .school:    return School.all
+        case .area:
+            return Area.items
+        case .school:
+            return School.items
         }
     }
 }
 
-protocol Inputable {
+protocol ItemType {
+    var selfName: String { get }
     var name: String { get }
-    static var all: [Inputable] { get }
 }
 
-enum Area: Int, Inputable {
-    case tokyo = 0
-    case saitama = 1
-    case kanagawa = 2
+extension ItemType {
+    var selfName: String {
+        return "\(self)"
+    }
+}
+
+enum Area: ItemType {
+    case tokyo
+    case saitama
+    case kanagawa
     
     static var title: String {
         return "Area"
@@ -43,15 +64,15 @@ enum Area: Int, Inputable {
         }
     }
     
-    static var all: [Inputable] {
+    static var items: [ItemType] {
         return [Area.tokyo, Area.saitama, Area.kanagawa]
     }
 }
 
-enum School: Int, Inputable {
-    case primary = 0
-    case junior = 1
-    case high = 2
+enum School: ItemType {
+    case primary
+    case junior
+    case high
     
     static var title: String {
         return "School"
@@ -65,18 +86,17 @@ enum School: Int, Inputable {
         }
     }
     
-    static var all: [Inputable] {
+    static var items: [ItemType] {
         return [School.primary, School.junior, School.high]
     }
 }
 
-//let index = 0
-//let pickerItem = DatePickerItems.init(rawValue: 0)
-//if let pickerItem = pickerItem {
-//    print(pickerItem.title)
-//    print(pickerItem.all.map({$0}))
-//    pickerItem.all.forEach { item in
+//let inputPickerModels = [InputPickerModel(data: .area), InputPickerModel(data: .school)]
+//inputPickerModels.forEach { pickerModel in
+//    print(" *** \(pickerModel.data.selfName) ***")
+//    print(" --- \(pickerModel.data.title) ---")
+//    pickerModel.data.items.forEach { item in
+//        print(item.selfName)
 //        print(item.name)
 //    }
 //}
-

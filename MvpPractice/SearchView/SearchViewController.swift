@@ -14,7 +14,7 @@ final class SearchViewController: UIViewController, SearchView {
         super.viewDidLoad()
         presenter = SearchViewPresenter(view: self)
         title = presenter.title
-        setupStartButton()
+        setupStartButton()        
     }
 }
 
