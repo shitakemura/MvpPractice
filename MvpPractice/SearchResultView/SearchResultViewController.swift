@@ -11,12 +11,12 @@ final class SearchResultViewController: UIViewController, SearchResultView {
     @IBOutlet weak var tableView: UITableView!
     
     private var presenter: SearchResultViewPresenter!
-    private var dataSource: SearchResultViewDataSource!
+    private var dataSource: SearchResultTableViewDataSource!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter = SearchResultViewPresenter(view: self)
-        dataSource = SearchResultViewDataSource(presenter: presenter)
+        dataSource = SearchResultTableViewDataSource(presenter: presenter)
         title = presenter.title
         dataSource.setup(with: tableView)
     }

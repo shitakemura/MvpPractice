@@ -31,7 +31,7 @@ final class SearchResultViewPresenter: SearchResultPresenter {
     }
     
     func fetchUserItems() {
-        userItems = [UserItem(name: "Item1"), UserItem(name: "Item2")]
+        userItems = [UserItem(name: "Item1", items: []), UserItem(name: "Item2", items: [])]
     }
     
     func userItem(at index: Int) -> UserItem {

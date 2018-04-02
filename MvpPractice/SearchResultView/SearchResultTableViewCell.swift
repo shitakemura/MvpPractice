@@ -3,6 +3,12 @@ import UIKit
 
 class SearchResultTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var textField: UITextField!
+    private let pickerView = UIPickerView()
+    
+    private var userItem: UserItem!
+    private var dataSource: SearchResultTableViewCellDataSource!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     }
@@ -12,6 +18,8 @@ class SearchResultTableViewCell: UITableViewCell {
     }
     
     func setup(with userItem: UserItem) {
-        textLabel?.text = userItem.name
+        textField.text = userItem.name
+        dataSource = SearchResultTableViewCellDataSource(userItem: userItem)
+        dataSource.setup(with: pickerView)
     }
 }

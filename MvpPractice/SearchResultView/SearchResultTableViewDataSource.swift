@@ -2,7 +2,7 @@
 import Foundation
 import UIKit
 
-final class SearchResultViewDataSource: NSObject {
+final class SearchResultTableViewDataSource: NSObject {
     fileprivate let presenter: SearchResultPresenter
     
     init(presenter: SearchResultPresenter) {
@@ -16,7 +16,7 @@ final class SearchResultViewDataSource: NSObject {
     }
 }
 
-extension SearchResultViewDataSource: UITableViewDataSource {
+extension SearchResultTableViewDataSource: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return presenter.numberOfItems
     }
@@ -29,7 +29,7 @@ extension SearchResultViewDataSource: UITableViewDataSource {
     }
 }
 
-extension SearchResultViewDataSource: UITableViewDelegate {
+extension SearchResultTableViewDataSource: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         presenter.showUserItem(at: indexPath.row)
     }
