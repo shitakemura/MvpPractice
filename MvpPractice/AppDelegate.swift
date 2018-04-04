@@ -17,6 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let topViewController = SearchViewController()
         let navigationController = UINavigationController(rootViewController: topViewController)
+        navigationController.navigationBar.backgroundColor = UIColor.blue
+        
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
@@ -40,3 +42,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 }
 
+private extension AppDelegate {
+
+}

@@ -12,7 +12,8 @@ final class SearchResultTableViewDataSource: NSObject {
     func setup(with tableView: UITableView) {
         tableView.dataSource = self
         tableView.delegate = self
-        tableView.register(SearchResultTableViewCell.self, forCellReuseIdentifier: SearchResultTableViewCell.className)
+        tableView.rowHeight = 100
+        tableView.register(UINib(nibName: SearchResultTableViewCell.className, bundle: nil), forCellReuseIdentifier: SearchResultTableViewCell.className)
     }
 }
 
