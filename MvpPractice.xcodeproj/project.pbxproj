@@ -15,6 +15,7 @@
 		182C6699206FD8220096F798 /* SearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 182C6697206FD8220096F798 /* SearchTableViewCell.xib */; };
 		182C669B206FD8490096F798 /* SearchViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182C669A206FD8490096F798 /* SearchViewDataSource.swift */; };
 		1830E081206FAB4E00E7C4AC /* EnumType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1830E080206FAB4E00E7C4AC /* EnumType.swift */; };
+		183E28BA2077A28B00D6FD7C /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183E28B92077A28B00D6FD7C /* UIViewController+Extension.swift */; };
 		18764A5F2071C79900A16FDA /* SearchResultTableViewCellDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18764A5E2071C79900A16FDA /* SearchResultTableViewCellDataSource.swift */; };
 		18925F192066889300068FF0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18925F182066889300068FF0 /* AppDelegate.swift */; };
 		18925F202066889300068FF0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18925F1F2066889300068FF0 /* Assets.xcassets */; };
@@ -40,6 +41,7 @@
 		182C6697206FD8220096F798 /* SearchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchTableViewCell.xib; sourceTree = "<group>"; };
 		182C669A206FD8490096F798 /* SearchViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewDataSource.swift; sourceTree = "<group>"; };
 		1830E080206FAB4E00E7C4AC /* EnumType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumType.swift; sourceTree = "<group>"; };
+		183E28B92077A28B00D6FD7C /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		18764A5E2071C79900A16FDA /* SearchResultTableViewCellDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultTableViewCellDataSource.swift; sourceTree = "<group>"; };
 		18925F152066889300068FF0 /* MvpPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MvpPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18925F182066889300068FF0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -151,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				18925F4420669CD400068FF0 /* NSObjectProtocol+Extension.swift */,
+				183E28B92077A28B00D6FD7C /* UIViewController+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -231,6 +234,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				183E28BA2077A28B00D6FD7C /* UIViewController+Extension.swift in Sources */,
 				181C8EDF2067396B00184231 /* ResultDetailViewController.swift in Sources */,
 				181C8ED52066BE1800184231 /* SearchViewPresenter.swift in Sources */,
 				181C8EE2206739A900184231 /* ResultDetailViewPresenter.swift in Sources */,

@@ -19,6 +19,13 @@ final class SearchResultViewController: UIViewController, SearchResultView {
         dataSource = SearchResultTableViewDataSource(presenter: presenter)
         title = presenter.title
         dataSource.setup(with: tableView)
+        setupNavigation()
+    }
+}
+
+extension SearchResultViewController {
+    func setupNavigation() {
+        addNavigationBackButton()
     }
 }
 
@@ -31,3 +38,4 @@ extension SearchResultViewController {
         navigationController?.pushViewController(itemDetailViewController, animated: true)
     }
 }
+
