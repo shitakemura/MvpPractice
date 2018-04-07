@@ -11,6 +11,7 @@
 		181C8EDF2067396B00184231 /* ResultDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181C8EDD2067396B00184231 /* ResultDetailViewController.swift */; };
 		181C8EE02067396B00184231 /* ResultDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 181C8EDE2067396B00184231 /* ResultDetailViewController.xib */; };
 		181C8EE2206739A900184231 /* ResultDetailViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181C8EE1206739A900184231 /* ResultDetailViewPresenter.swift */; };
+		1827B8A02078FECD004D9471 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1827B89F2078FECD004D9471 /* Error.swift */; };
 		182C6698206FD8220096F798 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182C6696206FD8220096F798 /* SearchTableViewCell.swift */; };
 		182C6699206FD8220096F798 /* SearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 182C6697206FD8220096F798 /* SearchTableViewCell.xib */; };
 		182C669B206FD8490096F798 /* SearchViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182C669A206FD8490096F798 /* SearchViewDataSource.swift */; };
@@ -37,6 +38,7 @@
 		181C8EDD2067396B00184231 /* ResultDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultDetailViewController.swift; sourceTree = "<group>"; };
 		181C8EDE2067396B00184231 /* ResultDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResultDetailViewController.xib; sourceTree = "<group>"; };
 		181C8EE1206739A900184231 /* ResultDetailViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultDetailViewPresenter.swift; sourceTree = "<group>"; };
+		1827B89F2078FECD004D9471 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 		182C6696206FD8220096F798 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
 		182C6697206FD8220096F798 /* SearchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchTableViewCell.xib; sourceTree = "<group>"; };
 		182C669A206FD8490096F798 /* SearchViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewDataSource.swift; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 			children = (
 				18925F392066913E00068FF0 /* UserItem.swift */,
 				1830E080206FAB4E00E7C4AC /* EnumType.swift */,
+				1827B89F2078FECD004D9471 /* Error.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -243,6 +246,7 @@
 				18925F4520669CD400068FF0 /* NSObjectProtocol+Extension.swift in Sources */,
 				18925F332066893000068FF0 /* SearchResultViewController.swift in Sources */,
 				18764A5F2071C79900A16FDA /* SearchResultTableViewCellDataSource.swift in Sources */,
+				1827B8A02078FECD004D9471 /* Error.swift in Sources */,
 				182C6698206FD8220096F798 /* SearchTableViewCell.swift in Sources */,
 				18925F3A2066913E00068FF0 /* UserItem.swift in Sources */,
 				182C669B206FD8490096F798 /* SearchViewDataSource.swift in Sources */,

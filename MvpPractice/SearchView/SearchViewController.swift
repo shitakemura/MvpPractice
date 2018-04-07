@@ -8,6 +8,7 @@ protocol SearchView: class {
 final class SearchViewController: UIViewController, SearchView {
 
     @IBOutlet weak var startButton: UIButton!
+//    private lazy var presenter = SearchPresenter(view: self)
     private var presenter: SearchPresenter!
     
     override func viewDidLoad() {
